@@ -37,3 +37,9 @@ nome text,
 id_situacaocadastro integer not null references situacaocadastro (id) default 0,
 datacadastro date not null default current_date
 );
+
+
+CREATE TABLE pais (
+id integer not null primary key generated always as identity,
+descricao text
+);
