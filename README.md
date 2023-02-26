@@ -1,3 +1,3 @@
-# Projeto FeiraFácil
+# Projeto FeiraFácil (em desenvolvimento)
 
-Projeto de software para gerenciar suas compras no supermercado
+Projeto de software para gerenciar suas compras no supermercado.
