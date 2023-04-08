@@ -181,6 +181,20 @@ terceiro_id integer references terceiro (id),
 situacao_id integer not null references situacao (id) default 1 
 );
 
+alter table carteira add final_cartao varchar(10);
+alter table carteira add bandeira varchar(20);
+
+alter table carteira add datacadastro timestamp default current_timestamp(0);
+
+alter table carteira drop column forma_pagamento_id;
+
+create table carteira_forma_pagamento (
+carteira_id integer,
+forma_pagamento_id integer,
+datacadastro timestamp default current_timestamp(0),
+unique (carteira_id, forma_pagamento_id)
+);
+
 
 
 create table compras (
