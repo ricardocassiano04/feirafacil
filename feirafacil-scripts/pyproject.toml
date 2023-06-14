@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling", "psycopg2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "feirafacil_scripts"
+version = "0.0.1"
+authors = [
+    { name = "Ricardo Cassiano", email="rc.cassiano01@gmail.com"},
+]
+description = "Pacote de scripts - FeiraFácil"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
