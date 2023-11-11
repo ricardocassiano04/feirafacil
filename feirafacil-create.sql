@@ -1,9 +1,11 @@
 /*
-Projeto de software para gerenciar suas compras no supermercado
+Projeto de software para gerenciar suas compras no supermercado.
+
+Apenas informações mercadológicas (não fiscais)
 
 Queries de criação das tabelas do banco feirafacildb
 
-Compatível com PostgreSQL 15 ou superior.
+Testado com PostgreSQL 15.
 
 Obs: O banco de dados ainda está em desenvolvimento.
 
@@ -18,8 +20,6 @@ descricao text
 
 INSERT INTO situacao (id, descricao) 
 values (0, 'EXCLUIDO'), (1, 'ATIVO');
-
-
 
 
 
@@ -175,18 +175,13 @@ datacadastro timestamp default current_timestamp(0)
 create table carteira (
 id integer not null primary key generated always as identity,
 descricao text,
-forma_pagamento_id integer references forma_pagamento (id),
 usuario_id integer references usuario (id),
 terceiro_id integer references terceiro (id),
-situacao_id integer not null references situacao (id) default 1 
+situacao_id integer not null references situacao (id) default 1,
+final_cartao varchar(10),
+bandeira varchar(20),
+datacadastro timestamp default current_timestamp(0)
 );
-
-alter table carteira add final_cartao varchar(10);
-alter table carteira add bandeira varchar(20);
-
-alter table carteira add datacadastro timestamp default current_timestamp(0);
-
-alter table carteira drop column forma_pagamento_id;
 
 create table carteira_forma_pagamento (
 carteira_id integer,
