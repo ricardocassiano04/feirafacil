@@ -1,7 +1,5 @@
 /*
-Projeto de software para gerenciar suas compras no supermercado.
-
-Apenas informações mercadológicas (não fiscais)
+Projeto para gerenciar suas compras no supermercado.
 
 Queries de criação das tabelas do banco feirafacildb
 
@@ -125,7 +123,7 @@ situacao_id integer not null references situacao (id) default 1
 
 
 
-create table tipoestabelecimento (
+create table tipo_estabelecimento (
 id integer not null primary key generated always as identity,
 descricao text,
 situacao_id integer not null references situacao (id) default 1 
