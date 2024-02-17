@@ -170,23 +170,6 @@ situacao_id integer not null references situacao (id) default 1,
 datacadastro timestamp default current_timestamp(0)
 );
 
-create table carteira (
-id integer not null primary key generated always as identity,
-descricao text,
-usuario_id integer references usuario (id),
-terceiro_id integer references terceiro (id),
-situacao_id integer not null references situacao (id) default 1,
-final_cartao varchar(10),
-bandeira varchar(20),
-datacadastro timestamp default current_timestamp(0)
-);
-
-create table carteira_forma_pagamento (
-carteira_id integer,
-forma_pagamento_id integer,
-datacadastro timestamp default current_timestamp(0),
-unique (carteira_id, forma_pagamento_id)
-);
 
 
 
@@ -208,9 +191,9 @@ create table compras_forma_pagamento (
 id bigint not null primary key generated always as identity,
 compra_id bigint references compras (id),
 forma_pagamento_id integer references forma_pagamento (id),
-carteira_id integer references carteira (id),
-unique (compra_id, forma_pagamento_id, carteira_id)
+unique (compra_id, forma_pagamento_id)
 );
+
 
 
 create table compras_item (
