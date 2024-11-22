@@ -3,12 +3,15 @@ Projeto para gerenciar suas compras no supermercado.
 
 Queries de criação das tabelas do banco feirafacildb
 
-Testado com PostgreSQL 15.
+Testado com PostgreSQL 17.
 
 Obs: O banco de dados ainda está em desenvolvimento.
 
 */
 
+create database feirafacildb ;
+
+\c feirafacildb
 
 
 create table situacao (
@@ -138,7 +141,7 @@ descricao text,
 cnpj varchar(13),
 endereco_id integer not null references endereco (id),
 situacao_id integer not null references situacao (id) default 1,
-tipoestabelecimento_id integer not null references tipoestabelecimento (id),
+tipoestabelecimento_id integer not null references tipo_estabelecimento (id),
 datacadastro timestamp  default current_timestamp(0)
 );
 
