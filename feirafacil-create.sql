@@ -208,7 +208,8 @@ valor_total numeric(15,2),
 chavenfce varchar(44),
 estabelecimento_id bigint references estabelecimento (id),
 usuario_id bigint references usuario (id),
-datahorainclusao timestamp default current_timestamp(0)
+data_cadastro timestamp default current_timestamp(0),
+data_atualizacao timestamp
 );
 
 
@@ -216,6 +217,8 @@ create table compras_forma_pagamento (
 id bigserial not null primary key,
 compra_id bigint references compras (id),
 forma_pagamento_id bigint references forma_pagamento (id),
+data_cadastro timestamp default current_timestamp(0),
+data_atualizacao timestamp,
 unique (compra_id, forma_pagamento_id)
 );
 
@@ -230,5 +233,16 @@ item_id bigint references item (id),
 quantidade numeric(15,2) not null,
 preco_unitario numeric(15,2),
 valor_total_item numeric(15,2),
-datahorainclusao timestamp default current_timestamp(0)
+data_cadastro timestamp default current_timestamp(0),
+data_atualizacao timestamp
 );
+
+
+
+create table dicionario_dados (
+id bigserial not null primary key, 
+tabela text,
+descricao text,
+data_cadastro timestamp default current_timestamp(0),
+data_atualizacao timestamp
+) ;
