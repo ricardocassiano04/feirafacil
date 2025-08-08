@@ -18,8 +18,8 @@ from funcoes import *
 
 
 opcoes_menu = {
-    1: 'Produto - Alterar flag pesável',
-    2: 'Relatório - Planilha de Cupons',   
+    1: 'Item - Alterar situação',
+    2: 'Relatório - Relatório de Compras',   
     3: 'Exit'
 }
 
@@ -30,13 +30,13 @@ def exibir_menu():
     for chave in opcoes_menu.keys():
         print (chave, '--', opcoes_menu[chave] )
 
-def opcao1_alterar_flag_pesavel_produto():
+def opcao1_alterar_situacao_item():
      print("Escolhida a opção 1: ", opcoes_menu[1])
-     alterar_flag_pesavel_produto()
+     alterar_situacao_item()
 
-def opcao2_planilha_cupons():
+def opcao2_relatorio_compras():
      print("Escolhida a opção 2: ", opcoes_menu[2])
-     planilha_cupons()
+     relatorio_cupons()
 
 
 
@@ -50,9 +50,9 @@ if __name__=='__main__':
             print('Valor inválido. Digite um número entre 1 e',len(opcoes_menu))
         
         if option == 1:
-           opcao1_alterar_flag_pesavel_produto()
+           opcao1_alterar_situacao_item()
         elif option == 2:
-            opcao2_planilha_cupons()      
+            opcao2_relatorio_compras()      
         elif option == 3:
             print('Saindo do programa. Até mais!!')
             exit()
