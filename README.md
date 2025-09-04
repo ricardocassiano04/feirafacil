@@ -1,9 +1,17 @@
-# Projeto FeiraFácil (em desenvolvimento)
+# FeiraFacil (em desenvolvimento)
 
-Projeto de software para gerenciar suas compras no supermercado, farmácia, etc.
+Atualmente em desenvolvimento.. o objetivo do FeiraFacil é organizar
+as compras mensais da feira e remédios.
 
-Nele você vai poder inserir suas compras e ter informações sobre os seus gastos,
-consumos mensais, etc.
+- Cadastre seus itens e lista de compras
+- Categorize suas listas
+- Anote suas compras
+- Tenha um histórico de compras (quantidade e valores)
+- Relatórios de compras 
+- Compare histórico de preços entre os estabelecimentos que você costuma comprar
 
-Vai poder comparar preços entre os estabelecimentos que costuma comprar, ver históricos
-de preços entre outas coisas.
+
+Qualquer sugestão me mande um email: rc.cassiano04@gmail.com
+
+
+
