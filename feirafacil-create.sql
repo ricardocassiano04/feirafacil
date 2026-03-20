@@ -1,7 +1,7 @@
 /*
 Projeto para gerenciar suas compras no supermercado.
 
-Queries de criação das tabelas do banco feirafacildb
+Queries de criação das tabelas do banco feirafacil
 
 Testado com PostgreSQL 17.
 
